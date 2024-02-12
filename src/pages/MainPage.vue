@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import {computed} from "vue";
-import appPackage from "../../package.json";
 import DefaultLayout from "@/layout/DefaultLayout.vue";
 import PostFilter from "@/entities/PostFilter.vue";
 import {useMoodBoardStore} from "@/plugins/stores/modules/moodBoardStore.ts";
 
-const siteName = computed(() => appPackage.name)
+const siteName = computed(() => import.meta.env.VITE_APP_TITLE)
 const storeMoodBoard = useMoodBoardStore()
 const notes = computed(()=> storeMoodBoard.notes)
 

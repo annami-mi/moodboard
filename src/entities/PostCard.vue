@@ -52,6 +52,8 @@ const props = defineProps<Props>()
   &__title{
     @include title-card;
     color: $neutral-100;
+    position: relative;
+    z-index: 1;
   }
   &__description{
     @include font-default;
