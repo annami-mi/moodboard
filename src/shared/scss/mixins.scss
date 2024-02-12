@@ -1,0 +1,57 @@
+@mixin font-default {
+  font-family: Roboto;
+  color: $neutral-100;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@mixin title-card {
+  @include font-default;
+  font-family: ProtestStrike;
+  font-size: 18px;
+
+  @media screen and (min-width: $tablet){
+    font-size: 24px;
+  }
+}
+
+@mixin title-section {
+  @include font-default;
+  font-family: Merriweather;
+  font-size: 24px;
+  font-weight: 300;
+
+  @media screen and (min-width: $tablet){
+    font-size: 32px;
+  }
+}
+
+@mixin p-medium {
+  @include font-default;
+  font-weight: 500;
+}
+
+@mixin p2 {
+  @include font-default;
+  font-size: 13px;
+}
+
+@mixin disabled{
+  opacity: .2;
+  pointer-events: none;
+}
+
+@mixin reset-style-input-text{
+  @include font-default;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: inherit;
+  scroll-margin-top: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  overflow: visible;
+  -moz-appearance: textfield;
+}

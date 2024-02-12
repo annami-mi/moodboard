@@ -1,0 +1,1 @@
+export * from "@/plugins/stores/modules/postStore"
